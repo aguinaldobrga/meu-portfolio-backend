@@ -14,7 +14,7 @@ app.use(express.json());
 // Adicione a URL do seu front-end para que o back-end aceite as requisições
 app.use(
   cors({
-    origin: ["https://meu-portfolio-sigma-two.vercel.app/"], // <-- SUBSTITUA PELA SUA URL REAL
+    origin: ["https://meu-portfolio-sigma-two.vercel.app"], // <-- SUBSTITUA PELA SUA URL REAL
   })
 );
 
@@ -65,6 +65,6 @@ app.post("/send-email", (req, res) => {
 
 // --- INICIALIZAÇÃO DO SERVIDOR ---
 
-app.listen(port, () => {
-  console.log(`Servidor rodando em http://localhost:${port}`);
+app.listen(process.env.PORT || port, () => {
+  console.log(`Servidor rodando na porta ${process.env.PORT || port}`);
 });
