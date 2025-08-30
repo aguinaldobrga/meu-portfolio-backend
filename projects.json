@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Portfólio",
     "description": "Um portfólio pessoal moderno e responsivo...",
-    "image": "https://github.com/aguinaldobrga/meu-portfolio-backend/blob/main/public/banner-1.png?raw=true",
+    "image": "/banner-1.png",
     "repoUrl": "https://github.com/seu-usuario/seu-repositorio",
     "skills": [
       { "id": 1, "name": "HTML5" },

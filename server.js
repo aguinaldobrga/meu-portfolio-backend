@@ -4,6 +4,7 @@ const cors = require("cors");
 require("dotenv").config();
 
 // O objeto 'app' precisa ser criado primeiro
+const path = require("path");
 const app = express();
 const port = 3001;
 
@@ -11,7 +12,7 @@ const port = 3001;
 app.use(express.json());
 
 // AQUI ESTÁ A MUDANÇA
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 // Adicione a URL do seu front-end para que o back-end aceite as requisições
 app.use(
   cors({
