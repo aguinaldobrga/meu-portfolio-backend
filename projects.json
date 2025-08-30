@@ -21,7 +21,7 @@
     "id": 2,
     "title": "Blog Pessoal",
     "description": "Plataforma para publicação de artigos com funcionalidades de autenticação e CRUD.",
-    "image": "https://lets.havelook.at/200x300/00782e/fff.png&text=Imagem+indispon%C3%ADvel+",
+    "image": "/banner-2.png",
     "previewUrl": "https://seu-blog-de-preview.com",
     "repoUrl": "https://github.com/seu-usuario/seu-repositorio-blog",
     "skills": [
@@ -39,7 +39,7 @@
     "id": 2,
     "title": "Gerenciador de Tarefas",
     "description": "Plataforma para publicação de artigos com funcionalidades de autenticação e CRUD.",
-    "image": "https://lets.havelook.at/200x300/00782e/fff.png&text=Imagem+indispon%C3%ADvel+",
+    "image": "/banner-3.png",
     "previewUrl": "https://seu-blog-de-preview.com",
     "repoUrl": "https://github.com/seu-usuario/seu-repositorio-blog",
     "skills": [
@@ -57,7 +57,7 @@
     "id": 2,
     "title": "Plataforma Social",
     "description": "Plataforma para publicação de artigos com funcionalidades de autenticação e CRUD.",
-    "image": "https://lets.havelook.at/200x300/00782e/fff.png&text=Imagem+indispon%C3%ADvel+",
+    "image": "/banner-4.png",
     "previewUrl": "https://seu-blog-de-preview.com",
     "repoUrl": "https://github.com/seu-usuario/seu-repositorio-blog",
     "skills": [
