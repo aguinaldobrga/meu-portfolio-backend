@@ -11,6 +11,7 @@ const port = 3001;
 app.use(express.json());
 
 // AQUI ESTÁ A MUDANÇA
+app.use(express.static('public'));
 // Adicione a URL do seu front-end para que o back-end aceite as requisições
 app.use(
   cors({
