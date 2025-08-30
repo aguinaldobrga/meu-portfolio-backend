@@ -9,7 +9,14 @@ const port = 3001;
 
 // Middleware para processar JSON e habilitar CORS
 app.use(express.json());
-app.use(cors());
+
+// AQUI ESTÁ A MUDANÇA
+// Adicione a URL do seu front-end para que o back-end aceite as requisições
+app.use(
+  cors({
+    origin: ["https://meu-portfolio-sigma-two.vercel.app/"], // <-- SUBSTITUA PELA SUA URL REAL
+  })
+);
 
 // --- ROTAS DA API ---
 
