@@ -13,11 +13,9 @@ app.use(express.json());
 // AQUI ESTÁ A MUDANÇA
 app.use(express.static(path.join(__dirname, 'public')));
 // Adicione a URL do seu front-end para que o back-end aceite as requisições
-app.use(
-  cors({
-    origin: ["https://meu-portfolio-sigma-two.vercel.app"], // <-- SUBSTITUA PELA SUA URL REAL
-  })
-);
+app.use(cors({
+  origin: ['http://localhost:5173', 'https://meu-portfolio-sigma-two.vercel.app']
+}));
 
 // --- ROTAS DA API ---
 
