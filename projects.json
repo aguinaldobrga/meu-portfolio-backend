@@ -1,0 +1,76 @@
+[
+  {
+    "id": 1,
+    "title": "Portfólio",
+    "description": "Um portfólio pessoal moderno e responsivo...",
+    "image": "../src/assets/img/banner-1.png",
+    "repoUrl": "https://github.com/seu-usuario/seu-repositorio",
+    "skills": [
+      { "id": 1, "name": "HTML5" },
+      { "id": 2, "name": "CSS3" },
+      { "id": 3, "name": "JavaScript" },
+      { "id": 4, "name": "React" }
+    ],
+    "descriptionItems": [
+      "Design responsivo para mobile e desktop.",
+      "Componentes reutilizáveis em React.",
+      "Interface intuitiva e performática."
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Blog Pessoal",
+    "description": "Plataforma para publicação de artigos com funcionalidades de autenticação e CRUD.",
+    "image": "https://lets.havelook.at/200x300/00782e/fff.png&text=Imagem+indispon%C3%ADvel+",
+    "previewUrl": "https://seu-blog-de-preview.com",
+    "repoUrl": "https://github.com/seu-usuario/seu-repositorio-blog",
+    "skills": [
+      { "id": 1, "name": "React" },
+      { "id": 2, "name": "Node.js" },
+      { "id": 3, "name": "Git" }
+    ],
+    "descriptionItems": [
+      "Integração com API REST.",
+      "Sistema de login e registro de usuários.",
+      "Funcionalidade de criação, leitura, atualização e exclusão de posts."
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Gerenciador de Tarefas",
+    "description": "Plataforma para publicação de artigos com funcionalidades de autenticação e CRUD.",
+    "image": "https://lets.havelook.at/200x300/00782e/fff.png&text=Imagem+indispon%C3%ADvel+",
+    "previewUrl": "https://seu-blog-de-preview.com",
+    "repoUrl": "https://github.com/seu-usuario/seu-repositorio-blog",
+    "skills": [
+      { "id": 1, "name": "React" },
+      { "id": 2, "name": "Node.js" },
+      { "id": 3, "name": "Git" }
+    ],
+    "descriptionItems": [
+      "Integração com API REST.",
+      "Sistema de login e registro de usuários.",
+      "Aplicativo para organização de tarefas com categorização, prioridades e lembretes."
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Plataforma Social",
+    "description": "Plataforma para publicação de artigos com funcionalidades de autenticação e CRUD.",
+    "image": "https://lets.havelook.at/200x300/00782e/fff.png&text=Imagem+indispon%C3%ADvel+",
+    "previewUrl": "https://seu-blog-de-preview.com",
+    "repoUrl": "https://github.com/seu-usuario/seu-repositorio-blog",
+    "skills": [
+      { "id": 1, "name": "React" },
+      { "id": 2, "name": "Node.js" },
+      { "id": 3, "name": "Git" }
+    ],
+    "descriptionItems": [
+      "Integração com API REST.",
+      "Sistema de login e registro de usuários.",
+      "Mini rede social com perfis de usuários, posts, comentários e sistema de curtidas."
+    ]
+  }
+
+ 
+]
