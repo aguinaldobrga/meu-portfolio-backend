@@ -1,34 +1,36 @@
-const express = require("express");
-const nodemailer = require("nodemailer");
-const cors = require("cors");
-require("dotenv").config();
+const express = require('express');
+const nodemailer = require('nodemailer');
+const cors = require('cors');
+const path = require('path');
+require('dotenv').config();
 
-// O objeto 'app' precisa ser criado primeiro
 const app = express();
-const port = 3001;
-const path = require("path");
-// Middleware para processar JSON e habilitar CORS
+const port = process.env.PORT || 3001;
+
+// --- Middlewares ---
 app.use(express.json());
 
-// AQUI ESTÁ A MUDANÇA
-app.use(express.static(path.join(__dirname, 'public')));
-// Adicione a URL do seu front-end para que o back-end aceite as requisições
+// A sua API só vai funcionar se a rota e o CORS estiverem no lugar certo
 app.use(cors({
   origin: ['http://localhost:5173', 'https://meu-portfolio-sigma-two.vercel.app']
 }));
 
+// Servir arquivos estáticos (imagens, etc.)
+app.use(express.static(path.join(__dirname, 'public')));
+
 // --- ROTAS DA API ---
 
 // Importe os dados dos projetos e defina a rota aqui
-const projectsData = require("./projects.json");
+const projectsData = require('./projects.json');
 
-app.get("/api/projects", (req, res) => {
+// A rota deve ser '/projects', sem o '/api'
+app.get('/projects', (req, res) => {
   res.json(projectsData);
 });
 
 // Configuração do Nodemailer
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  service: 'gmail',
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
@@ -36,7 +38,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // Rota para o envio do formulário
-app.post("/send-email", (req, res) => {
+app.post('/send-email', (req, res) => {
   const { name, email, message } = req.body;
 
   const mailOptions = {
@@ -54,16 +56,16 @@ app.post("/send-email", (req, res) => {
       console.log(error);
       return res
         .status(500)
-        .send({ success: false, message: "Erro ao enviar a mensagem." });
+        .send({ success: false, message: 'Erro ao enviar a mensagem.' });
     }
     res
       .status(200)
-      .send({ success: true, message: "Mensagem enviada com sucesso!" });
+      .send({ success: true, message: 'Mensagem enviada com sucesso!' });
   });
 });
 
 // --- INICIALIZAÇÃO DO SERVIDOR ---
 
-app.listen(process.env.PORT || port, () => {
-  console.log(`Servidor rodando na porta ${process.env.PORT || port}`);
+app.listen(port, () => {
+  console.log(`Servidor rodando na porta ${port}`);
 });
